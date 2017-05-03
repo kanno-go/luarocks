@@ -815,7 +815,8 @@ print([[
 
 if exists(vars.PREFIX) then
   if not FORCE then
-    die(S"$PREFIX exists. Use /F to force removal and reinstallation.")
+    --die(S"$PREFIX exists. Use /F to force removal and reinstallation.")
+	--don't die, needed to preinstall luajit inside luarocks
   else
     backup_config_files()
     print(S"Removing $PREFIX...")
